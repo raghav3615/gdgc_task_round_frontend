@@ -178,44 +178,104 @@ const App: React.FC = () => {
         }}
       >
         {/* Left Section */}
-        <div
-          style={{
-            flex: 1,
-            backgroundColor: "#f5f5f5",
-            color: "#000",
-            borderRadius: "12px",
-            padding: "20px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            gap: "10px",
-          }}
-        >
-          <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>
-            Ready to Transform?
-          </h2>
-          <p style={{ fontSize: "16px" }}>Join us to unlock your potential!</p>
-          <button
-            style={{
-              padding: "10px 20px",
-              fontSize: "16px",
-              backgroundColor: "#000",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-          >
-            Contact Us
-          </button>
-        </div>
+<div
+  style={{
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    padding: "0px 20px",
+    gap: "5px",
+  }}
+>
+  {/* Play Button with Text */}
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      gap: "10px",
+    }}
+  >
+    {/* Play Button */}
+    <div
+      style={{
+        width: "50px",
+        height: "50px",
+        borderRadius: "50%",
+        backgroundColor: "#fff",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        cursor: "pointer",
+      }}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="black"
+        viewBox="0 0 16 16"
+      >
+        <path d="M4.5 3.5v9l7-4.5-7-4.5z" />
+      </svg>
+    </div>
+
+    {/* Text */}
+    <div style={{ color: "#fff" }}>
+      <p style={{ fontSize: "1rem", margin: 0 }}>Let's See</p>
+      <p style={{ fontSize: "1.2rem", margin: 0, fontWeight: "bold" }}>
+        How We Did It
+      </p>
+    </div>
+  </div>
+
+  {/* Buttons Section */}
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "10px",
+    }}
+  >
+    {["WEB ANALYTICS", "EMAIL MARKETING", "SEO 2.0"].map((item, index) => (
+      <button
+        key={index}
+        style={{
+          padding: "10px 20px",
+          fontSize: "1rem",
+          color: "#fff",
+          border: "2px solid #fff",
+          borderRadius: "20px",
+          backgroundColor: "transparent",
+          cursor: "pointer",
+          textAlign: "center",
+          fontWeight: "bold",
+          transition: "all 0.3s",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = "#fff";
+          e.currentTarget.style.color = "#000";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = "transparent";
+          e.currentTarget.style.color = "#fff";
+        }}
+      >
+        {item}
+      </button>
+    ))}
+  </div>
+</div>
+
 
         {/* Right Section */}
         <div
           style={{
             display: "flex",
             flex: 2,
-            gap: "20px",
+            gap: "5px",
             justifyContent: "space-between",
           }}
         >
