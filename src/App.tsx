@@ -169,49 +169,92 @@ const App: React.FC = () => {
       <footer
         style={{
           display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          padding: "20px",
-          backgroundColor: "#111",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+          padding: "40px 20px",
+          backgroundColor: "#000",
           borderTop: "1px solid #333",
-          flexShrink: 0,
+          gap: "20px",
         }}
       >
+        {/* Left Section */}
         <div
           style={{
             flex: 1,
-            margin: "0 10px",
-            textAlign: "center",
-            padding: "20px",
-            backgroundColor: "#f76300",
+            backgroundColor: "#f5f5f5",
+            color: "#000",
             borderRadius: "12px",
+            padding: "20px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: "10px",
           }}
         >
-          <h3 style={{ margin: 0 }}>Unique Business Solutions</h3>
+          <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>
+            Ready to Transform?
+          </h2>
+          <p style={{ fontSize: "16px" }}>Join us to unlock your potential!</p>
+          <button
+            style={{
+              padding: "10px 20px",
+              fontSize: "16px",
+              backgroundColor: "#000",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+            }}
+          >
+            Contact Us
+          </button>
         </div>
+
+        {/* Right Section */}
         <div
           style={{
-            flex: 1,
-            margin: "0 10px",
-            textAlign: "center",
-            padding: "20px",
-            backgroundColor: "#ccc",
-            borderRadius: "12px",
+            display: "flex",
+            flex: 2,
+            gap: "20px",
+            justifyContent: "space-between",
           }}
         >
-          <h3 style={{ margin: 0 }}>Our Case Studies</h3>
-        </div>
-        <div
-          style={{
-            flex: 1,
-            margin: "0 10px",
-            textAlign: "center",
-            padding: "20px",
-            backgroundColor: "#ffc107",
-            borderRadius: "12px",
-          }}
-        >
-          <h3 style={{ margin: 0 }}>700+ Successful Projects</h3>
+          {["UNIQUE BUSINESS SOLUTIONS", "OUR CASE STUDIES", "SUCCESSFUL PROJECTS"].map(
+            (text, index) => (
+              <div
+                key={index}
+                style={{
+                  flex: 1,
+                  textAlign: "center",
+                  padding: "20px",
+                  backgroundColor: ["#ff6000", "#ddd", "#ffc400"][index],
+                  color: "#000",
+                  borderRadius: "12px",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                {text.split(" ").map((line, idx) => (
+                  <span key={idx}>{line}</span>
+                ))}
+                {index === 2 && (
+                  <div
+                    style={{
+                      marginTop: "10px",
+                      fontSize: "64px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    700+
+                  </div>
+                )}
+              </div>
+            )
+          )}
         </div>
       </footer>
     </div>
