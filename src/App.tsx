@@ -1,5 +1,5 @@
 import 'react';
-import { Play, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import './App.css';
 
 const LandingPage = () => {
@@ -63,7 +63,13 @@ const LandingPage = () => {
             </div>
             <div className="card-content">
               <div className="boost-text">
-                <p>YOUR <br /> BUSINESS <br /> BOOST</p>
+                <p>
+                  YOUR
+                  <br />
+                  BUSINESS
+                  <br />
+                  BOOST
+                </p>
               </div>
               <button className="demo-button">
                 Book Demo Call
@@ -76,15 +82,57 @@ const LandingPage = () => {
 
       {/* Bottom Grid Section */}
       <div className="bottom-grid">
-        <div className="play-section">
-          <button className="play-button">
-            <Play size={24} />
-            <span>
-              Let's See
-              <br />
-              How We Did It
-            </span>
-          </button>
+        <div
+          style={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            gap: "20px",
+          }}
+        >
+          {/* Play Button with Text */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            {/* Play Button */}
+            <div
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "#fff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="black"
+                viewBox="0 0 16 16"
+              >
+                <path d="M4.5 3.5v9l7-4.5-7-4.5z" />
+              </svg>
+            </div>
+
+            {/* Text */}
+            <div style={{ color: "#fff" }}>
+              <p style={{ fontSize: "1rem", margin: 0 }}>Let's See</p>
+              <p style={{ fontSize: "1.2rem", margin: 0, fontWeight: "bold" }}>
+                How We Did It
+              </p>
+            </div>
+          </div>
 
           <div className="services-list">
             <button>WEB ANALYTICS</button>
@@ -112,8 +160,14 @@ const LandingPage = () => {
 
           <div className="card yellow-card">
             <div>
-              <h3>SUCCESSFUL <br />PROJECTS</h3>
-              <div className="projects-number">700<sup>+</sup></div>
+              <h3>
+                SUCCESSFUL
+                <br />
+                PROJECTS
+              </h3>
+              <div className="projects-number">
+                700<sup>+</sup>
+              </div>
             </div>
           </div>
         </div>

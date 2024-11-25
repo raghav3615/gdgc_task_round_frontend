@@ -254,6 +254,7 @@ body {
 .orange-card {
   background: var(--orange);
   font-size: 0.7rem;
+  color: #000000;
 }
 
 .gray-card {
