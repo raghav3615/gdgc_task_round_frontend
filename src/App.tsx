@@ -1,4 +1,4 @@
-import React from 'react';
+import 'react';
 import { Play, ArrowRight } from 'lucide-react';
 import './App.css';
 
