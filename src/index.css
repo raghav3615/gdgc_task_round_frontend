@@ -1,3 +1,4 @@
+/* src/pages/LandingPage.css */
 :root {
   --purple: #9333EA;
   --orange: #F97316;
@@ -35,7 +36,7 @@ body {
 .logo {
   width: 2rem;
   height: 2rem;
-  background: #42f070;
+  background: #06B6D4;
   border-radius: 50%;
 }
 
@@ -50,10 +51,6 @@ body {
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: #ffffff;
 }
 
 .sign-up {
@@ -73,15 +70,10 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   padding-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 /* Left Column */
-.left-column {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
 .hero-section h1 {
   font-size: 4.5rem;
   font-weight: 700;
@@ -129,11 +121,49 @@ body {
   line-height: 1.4;
 }
 
-.bottom-actions {
+/* Right Column - Purple Card */
+.purple-card {
+  background: var(--purple);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  height: 100%;
+  min-height: 300px;
+}
+
+.boost-text p {
+  font-size: 1.5rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.demo-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Bottom Grid Section */
+.bottom-grid {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+.play-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .play-button {
@@ -168,64 +198,24 @@ body {
   font-size: 0.875rem;
 }
 
-/* Right Column */
-.right-column {
+/* Feature Cards */
+.feature-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-}
-
-.purple-card {
-  background: var(--purple);
-  grid-row: span 2;
-  padding: 2rem;
 }
 
 .card {
   border-radius: 1.5rem;
   padding: 1.5rem;
-}
-
-.card-content {
-  height: 100%;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.demo-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: white;
-  color: black;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-  margin-top: 2rem;
-}
-
-.small-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
 }
 
 .orange-card {
   background: var(--orange);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.circle-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 2px solid white;
-  border-radius: 50%;
-  margin-top: 1rem;
 }
 
 .gray-card {
@@ -233,26 +223,29 @@ body {
   color: black;
 }
 
-.case-studies {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
 .yellow-card {
   background: var(--yellow);
   color: black;
 }
 
-.yellow-card h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 0 0 1rem 0;
+.circle-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-top: 1rem;
 }
 
-.yellow-card p {
+.card h3 {
   margin: 0;
+  font-size: 1.25rem;
   line-height: 1.4;
+}
+
+.projects-number {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 1rem;
 }
 
 /* Responsive Design */
@@ -265,6 +258,14 @@ body {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+  
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -274,9 +275,5 @@ body {
   
   .hero-section h1 {
     font-size: 2.5rem;
-  }
-  
-  .small-cards {
-    grid-template-columns: 1fr;
   }
 }
